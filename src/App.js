@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 import { store } from "./redux/store";
 import Sidebar from "./components/Sidebar";
-import TodoPage from "./pages/TodoPage";
+import TodoPage from "./pages/TodoPages";
 import WeatherPage from "./pages/WeatherPage";
 import WikipediaPage from "./pages/WikipediaPage";
 import "./styles/global.css";

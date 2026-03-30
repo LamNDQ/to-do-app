@@ -22,6 +22,7 @@
   transition: background .2s, border-color .2s, transform .2s, box-shadow .2s;
   color: inherit;
 }
+
 .wiki-link:hover {
   background: var(--surface-hover);
   border-color: var(--accent);
@@ -36,7 +37,7 @@
   min-width: 28px;
   border-radius: 50%;
   background: var(--accent-soft);
-  border: 1px solid rgba(124,110,255,.3);
+  border: 1px solid rgba(124, 110, 255, .3);
   color: var(--accent);
   font-family: 'Syne', sans-serif;
   font-size: 12px;
@@ -47,7 +48,10 @@
   flex-shrink: 0;
 }
 
-.wiki-content { flex: 1; min-width: 0; }
+.wiki-content {
+  flex: 1;
+  min-width: 0;
+}
 
 .wiki-title {
   font-family: 'Syne', sans-serif;
@@ -59,7 +63,10 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.wiki-link:hover .wiki-title { color: var(--accent); }
+
+.wiki-link:hover .wiki-title {
+  color: var(--accent);
+}
 
 .wiki-snippet {
   font-size: 13px;
@@ -69,6 +76,7 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   line-height: 1.5;
+  line-clamp: 3;
 }
 
 .wiki-arrow {
@@ -77,4 +85,8 @@
   flex-shrink: 0;
   transition: color .2s, transform .2s;
 }
-.wiki-link:hover .wiki-arrow { color: var(--accent); transform: translate(2px,-2px); }
+
+.wiki-link:hover .wiki-arrow {
+  color: var(--accent);
+  transform: translate(2px, -2px);
+}
