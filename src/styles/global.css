@@ -234,8 +234,74 @@ input {
 }
 
 /* ─── Responsive ─────────────────────────────────────────── */
-@media (max-width: 600px) {
+
+/* Tablet (≤768px) */
+@media (max-width: 768px) {
+    :root {
+        --sidebar-w: 200px;
+    }
+
     .page-wrapper {
-        padding: 32px 16px 60px;
+        padding: 36px 24px 70px;
+    }
+
+    .page-title {
+        font-size: 26px;
+    }
+}
+
+/* Mobile (≤600px) — sidebar collapses to bottom nav */
+@media (max-width: 600px) {
+
+    /* Stack layout vertically, nav goes to bottom */
+    .app-layout {
+        flex-direction: column-reverse;
+        /* content on top, nav on bottom */
+    }
+
+    .main-content {
+        flex: 1;
+        overflow-y: auto;
+        /* Leave space for bottom nav bar */
+        padding-bottom: 70px;
+    }
+
+    .page-wrapper {
+        padding: 24px 16px 16px;
+        max-width: 100%;
+    }
+
+    .page-header {
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    .page-icon {
+        font-size: 24px;
+    }
+
+    .page-title {
+        font-size: 22px;
+    }
+
+    .page-subtitle {
+        font-size: 12px;
+    }
+
+    /* Shared error + empty */
+    .error-card {
+        font-size: 13px;
+        padding: 12px 14px;
+    }
+}
+
+/* Small phones (≤380px) */
+@media (max-width: 380px) {
+    .page-wrapper {
+        padding: 20px 12px 12px;
+    }
+
+    .page-title {
+        font-size: 20px;
     }
 }

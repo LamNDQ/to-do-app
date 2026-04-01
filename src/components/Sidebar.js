@@ -17,7 +17,7 @@ function Sidebar() {
       </div>
 
       <nav className="sidebar-nav">
-        {NAV_ITEMS.map(({ path, label, icon }) => (
+        {NAV_ITEMS.map(({ path, label, shortLabel, icon }) => (
           <NavLink
             key={path}
             to={path}
@@ -26,7 +26,8 @@ function Sidebar() {
             }
           >
             <span className="nav-icon">{icon}</span>
-            <span className="nav-label">{label}</span>
+            {/* Desktop: full label; Mobile (via CSS): short label shown via data attribute */}
+            <span className="nav-label" data-short={shortLabel}>{label}</span>
             <span className="nav-arrow">›</span>
           </NavLink>
         ))}
